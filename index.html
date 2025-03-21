@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Under Construction</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #000;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+            color: #0f0;
+        }
+
+        .construction-container {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .message {
+            font-size: 3em;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-shadow: 0 0 5px #0f0;
+            animation: pulse 2s infinite;
+            position: relative;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        .circuit-board {
+            position: absolute;
+            width: 100vw;
+            height: 100vh;
+            background: url('https://www.transparenttextures.com/patterns/circuit-board.png');
+            background-size: cover;
+            opacity: 0.2;
+            animation: boardGlow 5s infinite linear;
+        }
+
+        @keyframes boardGlow {
+            0% { opacity: 0.2; }
+            50% { opacity: 0.4; }
+            100% { opacity: 0.2; }
+        }
+
+        .data-stream {
+            position: absolute;
+            width: 4px;
+            height: 100px;
+            background: linear-gradient(to bottom, #0f0, transparent);
+            top: -100px;
+            animation: dataFlow 3s linear infinite;
+        }
+
+        @keyframes dataFlow {
+            from { top: -100px; }
+            to { top: 100vh; }
+        }
+
+        .data-stream:nth-child(1) { left: 5%; animation-delay: 0.1s; }
+        .data-stream:nth-child(2) { left: 15%; animation-delay: 0.3s; }
+        .data-stream:nth-child(3) { left: 25%; animation-delay: 0.5s; }
+        .data-stream:nth-child(4) { left: 35%; animation-delay: 0.7s; }
+        .data-stream:nth-child(5) { left: 45%; animation-delay: 0.9s; }
+        .data-stream:nth-child(6) { left: 55%; animation-delay: 1.1s; }
+        .data-stream:nth-child(7) { left: 65%; animation-delay: 1.3s; }
+        .data-stream:nth-child(8) { left: 75%; animation-delay: 1.5s; }
+        .data-stream:nth-child(9) { left: 85%; animation-delay: 1.7s; }
+        .data-stream:nth-child(10) { left: 95%; animation-delay: 1.9s; }
+
+        .right-effects {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+        .glowing-dot {
+            width: 15px;
+            height: 15px;
+            margin: 15px;
+            background: #0f0;
+            border-radius: 50%;
+            box-shadow: 0 0 10px #0f0, 0 0 20px #0f0;
+            animation: blink 1s infinite alternate;
+        }
+
+        @keyframes blink {
+            0% { opacity: 1; }
+            100% { opacity: 0.2; }
+        }
+
+        .additional-text {
+            font-size: 1.5em;
+            text-shadow: 0 0 5px #0f0;
+            margin-top: 20px;
+            animation: fade-in 2s forwards;
+        }
+
+        @keyframes fade-in {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .message {
+                font-size: 2em;
+            }
+            .additional-text {
+                font-size: 1em;
+            }
+            .glowing-dot {
+                width: 10px;
+                height: 10px;
+                margin: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .message {
+                font-size: 1.5em;
+            }
+            .additional-text {
+                font-size: 0.8em;
+            }
+            .glowing-dot {
+                width: 8px;
+                height: 8px;
+                margin: 8px;
+            }
+            .data-stream {
+                width: 3px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="circuit-board"></div>
+    <div class="construction-container">
+        <div class="message">Website Under Construction</div>
+        <div class="additional-text">Coming Soon...</div>
+    </div>
+    <div class="data-stream"></div>
+    <div class="data-stream"></div>
+    <div class="data-stream"></div>
+    <div class="data-stream"></div>
+    <div class="data-stream"></div>
+    <div class="data-stream"></div>
+    <div class="data-stream"></div>
+    <div class="data-stream"></div>
+    <div class="data-stream"></div>
+    
+    <div class="right-effects">
+        <div class="glowing-dot"></div>
+        <div class="glowing-dot"></div>
+        <div class="glowing-dot"></div>
+    </div>
+</body>
+</html>
