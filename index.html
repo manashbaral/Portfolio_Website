@@ -69,6 +69,7 @@
       margin: 50px auto;
       padding: 0 20px;
       flex-wrap: wrap;
+      height: 75vh;
     }
 
     .left-section {
@@ -113,6 +114,32 @@
         padding: 20px 0;
       }
     }
+
+    #element {
+      color: #ffcc00;
+      font-weight: bold;
+    }
+    main hr {
+      border: 0;
+      height: 1px;
+      background: #2a2af0;
+      margin: 40px 0;
+    ;
+    }
+    .second {
+      max-width: 1200px;
+      margin: 50px auto;
+      padding: 0 20px;
+      text-align: left;
+    }
+
+    .wait{
+      color: red;
+      max-width: 1200px;
+      margin: 50px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
   </style>
 </head>
 <body>
@@ -136,11 +163,46 @@
       <div class="left-section">
         Hi! I am <span class="highlight">Manash Baral</span>.
         <div>An Electronics, Communication and Information Engineering student.</div>
+        <div>And I'm a passionate about <span id="element"></span></div>
       </div>
       <div class="right-section">
         <img src="profile.png" alt="Profile Picture">
       </div>
     </section>
+
+    <hr>
+
+    <section class="second">
+      <h1>My Skills</h1>
+      <ul>
+        <li>Programming Languages: Python, C, C++</li>
+        <li>Web Development: HTML, CSS, JavaScript</li>
+        <li>Machine Learning: Scikit-learn, TensorFlow</li>
+        <li>Data Analysis: Pandas, NumPy</li>
+        <li>Version Control: Git, GitHub</li>
+        <li>Embedded Systems: Arduino, Raspberry Pi</li>
+        <li>Communication Protocols: I2C, SPI, UART</li>
+      </ul>
+    </section>
+
+    <section class="wait">
+      <h1><span id="waitelement"></span></h1>
+    </section>
+
   </main>
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+   <!-- Setup and start animation! -->
+  <script>
+    var typed = new Typed('#element', {
+      strings: ['Electronics', 'Machine Learning', 'AI'],
+      loop: true,
+      typeSpeed: 50,
+    });
+    var typed = new Typed('#waitelement', {
+      strings: ['Please Wait...Site is Under Construction'],
+      loop: true,
+      typeSpeed: 50,
+    });
+  </script>
 </body>
 </html>
