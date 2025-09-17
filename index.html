@@ -7,239 +7,9 @@
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #121212;
-      color: #f1f1f1;
-      line-height: 1.6;
-    }
-
-    header {
-      background-color: #148EB4;
-    }
-
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      max-width: 1200px;
-      margin: 0 auto;
-      height: 70px;
-      padding: 0 20px;
-    }
-
-    .left {
-      font-size: 1.5rem;
-      font-weight: 600;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-    }
-
-    nav ul li {
-      margin-left: 25px;
-    }
-
-    nav ul li a {
-      text-decoration: none;
-      color: #fff;
-      font-weight: 500;
-      transition: color 0.3s ease;
-    }
-
-    nav ul li a:hover {
-      color: #ffcc00;
-    }
-
-    .Intro {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      max-width: 1200px;
-      margin: 50px auto;
-      padding: 0 20px;
-      flex-wrap: wrap;
-      height: 75vh;
-    }
-
-    .left-section {
-      flex: 1 1 50%;
-      font-size: 2rem;
-      padding-right: 20px;
-    }
-
-    .left-section div {
-      margin-top: 10px;
-      font-size: 1.3rem;
-      font-weight: 400;
-    }
-
-    .highlight {
-      color: #ff4b5c;
-      font-weight: bold;
-    }
-
-    .right-section {
-      flex: 1 1 40%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .right-section img {
-      width: 300px;
-      max-width: 100%;
-      border-radius: 50%;
-      border: 4px solid #148EB4;
-      object-fit: cover;
-    }
-
-    @media (max-width: 768px) {
-      .first {
-        flex-direction: column-reverse;
-        text-align: center;
-      }
-
-      .left-section {
-        padding: 20px 0;
-      }
-    }
-
-    #element {
-      color: #ffcc00;
-      font-weight: bold;
-    }
-    main hr {
-      border: 0;
-      height: 1px;
-      background: #2a2af0;
-      margin: 40px 0;
-    ;
-    }
-    .skill {
-      max-width: 1200px;
-      margin: 50px auto;
-      padding: 0 20px;
-      text-align: center;
-    }
+  <link rel="stylesheet" href="style.css">
 
 
-    .skills-list {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 40px 60px;
-            max-width: 700px;
-            margin: 30px auto 0 auto;
-          }
-      .skill-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 180px;
-            margin-bottom: 40px;
-  }
-      .skill-item img {
-            width: 100px;
-            height: 100px;
-            object-fit: contain;
-            margin-bottom: 10px;
-          }
-      .skill-caption {
-            color: #fff;
-            font-size: 1.1rem;
-            margin-top: 5px;
-            font-weight: 500;
-          }
-      @media (max-width: 900px) {
-            .skills-list {
-              gap: 30px 20px;
-            }
-      .skill-item {
-              width: 45vw;
-              max-width: 180px;
-            }
-          }
-      @media (max-width: 600px) {
-            .skills-list {
-              flex-direction: column;
-              align-items: center;
-              gap: 25px 0;
-            }
-      .skill-item {
-              width: 80vw;
-              max-width: 200px;
-            }
-          }
-
-    .projects {
-      max-width: 1200px;
-      margin: 50px auto;
-      padding: 0 20px;
-      text-align: center;
-    }
-    .projects-list {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 40px 60px;
-      max-width: 700px;
-      margin: 30px auto 0 auto;
-      
-    }
-    .project-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 700px;
-    height: 300px;
-    margin-bottom: 0px;
-    background-color: whitesmoke;
-  }
-
-  .project-description {
-    max-width: 700px;
-    margin: 0 auto 40px auto;
-    padding: 20px;
-    background-color: #1e1e1e;
-    color: #f1f1f1;
-    text-align: left;
-    margin-bottom: 40px;
-    margin-top: 0px;
-  }
-
-  .Education {
-    max-width: 1200px;
-    margin: 50px auto;
-    padding: 0 20px;
-    text-align: center;
-  }
-
-  .education-item {
-    background-color: #1e1e1e;
-    padding: 20px;
-    margin-bottom: 20px;
-    text-align: left;
-    border-radius: 8px;
-  }
-
-  .contact {
-    max-width: 1200px;
-    margin: 50px auto;
-    padding: 0 20px;
-    text-align: center;
-  }
-  </style>
 </head>
 <body>
   <header>
@@ -247,11 +17,11 @@
       <div class="left">Manash's Portfolio</div>
       <div class="right">
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Skills</a></li>
-          <li><a href="#">Projects</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
     </nav>
@@ -285,29 +55,32 @@
             <div class="skill-caption">HTML</div>
           </div>
           <div class="skill-item">
-            <img src="images/support.png" alt="AI">
-            <div class="skill-caption">AI</div>
+            <img src="images/css.png" alt="AI">
+            <div class="skill-caption">CSS</div>
           </div>
           <div class="skill-item">
-            <img src="images/support.png" alt="Skill 4">
-            <div class="skill-caption">Skill 4</div>
+            <img src="images/arduino.png" alt="Skill 4">
+            <div class="skill-caption">Arduino</div>
           </div>
           <div class="skill-item">
-            <img src="images/support.png" alt="Skill 5">
-            <div class="skill-caption">Skill 5</div>
+            <img src="images/raspberrypi.png" alt="Skill 5">
+            <div class="skill-caption">Raspberry Pi</div>
           </div>
           <div class="skill-item">
-            <img src="images/support.png" alt="Skill 6">
-            <div class="skill-caption">Skill 6</div>
+            <img src="images/PCB.png" alt="Skill 6">
+            <div class="skill-caption">PCB Design</div>
           </div>
           <div class="skill-item">
-            <img src="images/support.png" alt="Skill 7">
-            <div class="skill-caption">Skill 7</div>
+            <img src="images/C.png" alt="Skill 7">
+            <div class="skill-caption">C Programming</div>
           </div>
           <div class="skill-item">
-            <img src="images/support.png" alt="Skill 8">
-            <div class="skill-caption">Skill 8</div>
+            <img src="images/c++.png" alt="Skill 8">
+            <div class="skill-caption">C++ Programming</div>
           </div>
+          <div class="skill-item">
+            <img src="images/python.png" alt="Skill 9">
+            <div class="skill-caption">Python Programming</div> 
         </div>
         </div>
     </section>
@@ -315,62 +88,145 @@
   <hr>
 
     <section class="projects">
-          <h1>My <span class="highlight">Projects</span></h1>
-          <div div class="projects-list">
+      <h1>My <span class="highlight">Projects</span></h1>
+      <div div class="projects-list">
 
-            <div class="project-item">
-              <img src="images/test.png" width="500px" height="300px" alt="Project 1">
-            </div>
-            <div class ="project-description">
-              <h2>Project Title: ABC</h2>
-              <p>This is a sample project description. You can replace this text with details about your project, technologies used, and any other relevant information.</p>
-            </div>
+        <div class="project-item">
+          <img src="images/project.png" width="500px" height="300px" alt="Project 1">
+        </div>
+        <div class ="project-description">
+          <h2>Project Title: ABC</h2>
+          <p>This is a sample project description.</p>
+        </div>
 
-            <div class="project-item">
-              <img src="images/test.png" width="500px" height="300px" alt="Project 2">
-            </div>
-            <div class ="project-description">
-              <h2>Project Title: DEF</h2>
-              <p>This is a sample project description. You can replace this text with details about your project, technologies used, and any other relevant information.</p>
-            </div>
+        <div class="project-item">
+          <img src="images/project.png" width="500px" height="300px" alt="Project 2">
+        </div>
+        <div class ="project-description">
+          <h2>Project Title: DEF</h2>
+          <p>This is a sample project description.</p>
+        </div>
 
-           <div class="project-item">
-              <img src="images/test.png" width="500px" height="300px" alt="Project 3">
-            </div>
-            <div class ="project-description">
-              <h2>Project Title: GHI</h2>
-              <p>This is a sample project description. You can replace this text with details about your project, technologies used, and any other relevant information.</p>
-            </div>
-          </div>
-        </section>
+       <div class="project-item">
+          <img src="images/project.png" width="500px" height="300px" alt="Project 3">
+        </div>
+        <div class ="project-description">
+          <h2>Project Title: GHI</h2>
+          <p>This is a sample project description.</p>
+        </div>
+      </div>
+    </section>
 
-      <hr>
+    <hr>
+
+    <!-- Achievement Section Start -->
+    <section class="achievement">
+      <h1>My <span class="highlight">Achievements</span></h1>
+      <div class="achievement-list">
+        <div class="achievement-item">
+          <h3>Semester Topper</h3>
+          <p><span style="color:#ffcc00;">I,II,III,IV Sem</span> &mdash; Achieved the highest academic performance in all semesters.</p>
+        </div>
+        <div class="achievement-item">
+          <h3>Runner-Up at KEC-LITE</h3>
+          <p><span style="color:#ffcc00;">2024</span> &mdash; Secured the second position in the KEC-LITE Hardware demonstration competition, showcasing the <span style="color:#ffcc00;">Smart Mirror</span> project.</p>
+        </div>
+        <div class="achievement-item">
+          <h3>Runner-Up at EEPEX 25</h3>
+          <p><span style="color:#ffcc00;">2025</span> &mdash; Secured the second position in 24 hours <span style="color:#ffcc00;">Hardware Hackathon</span> competition organized by EEPEX at <span style="color:#ffcc00;">Kathmandu University.</span></p>
+        </div>
+      </div>
+
+      <div class="achievement-list">
+        <div class="achievement-item">
+          <h3>Runner-Up in Line Following Robot</h3>
+          <p><span style="color:#ffcc00;">2025</span> &mdash; Secured the second position in the Line Follow Robot competition in <span style="color:#ffcc00;">Dristi</span> organized at <span style="color:#ffcc00;">Kathmandu Engineering College.</span></p>
+        </div>
+        <div class="achievement-item">
+          <h3>Runner-Up in Line Following Robot</h3>
+          <p><span style="color:#ffcc00;">2025</span> &mdash; Secured the second position in the Line Following Robot competition in <span style="color:#ffcc00;">Locus</span> organized at <span style="color:#ffcc00;">Pulchowk Campus,IOE.</span></p>
+        </div>
+    </section>
+    <!-- Achievement Section End -->
+
+    <hr>
 
       <section class="Education">
+        <h1>My <span class="highlight">Education</span></h1>
         <div class="education-list">
-          <h1>My <span class="highlight">Education</span></h1>
           <div class="education-item">
             <h3>Bachelor's in Electronics, Communication and Information Engineering</h3>
-            <p>Kantipur Engineering College, Tribhuvan University, 2023 - Present</p>
+            <p><strong>Kantipur Engineering College</strong>, Tribhuvan University</p>
+            <p><span style="color:#ffcc00;">2023 - Present</span></p>
+            <p>Relevant Courses: Digital Systems, Microprocessors, Communication Systems</p>
           </div>
           <div class="education-item">
             <h3>School Leaving Certificate</h3>
-            <p>Global Educational Academy, 2019 - 2021</p>
-            <p>Stream: Science, GPA: 3.9</p>
+            <p><strong>Global Educational Academy</strong>, Damak-5, Jhapa</p>
+            <p><span style="color:#ffcc00;">2020 - 2022</span></p>
+            <p>Stream: Science &nbsp; | &nbsp; GPA: <span style="color:#ffcc00;">3.45</span></p>
           </div>
           <div class="education-item">
             <h3>Secondary Education Examination</h3>
-            <p>Shishu Shiksha Sadan English School, 2017 - 2019</p>
-            <p>GPA: 3.9</p>
+            <p><strong>Shishu Shiksha Sadan English School</strong>, Urlabari-9, Morang</p>
+            <p><span style="color:#ffcc00;">2006 - 2019</span></p>
+            <p>GPA: <span style="color:#ffcc00;">3.9</span></p>
           </div>
         </div>
       </section>
     
       <hr>
+      <!-- Experience Section Start -->
+      <section class="experience">
+      <h1>My <span class="highlight">Experiences</span></h1>
+      <div class="experience-list">
+        <div class="experience-item">
+          <h3><span style="color:#ffcc00;">Organizer</span></h3>
+          <p><strong>KEC LITE 2024</strong></p>
+          <p><span style="color:#ffcc00;">December 2024</span></p>
+          <p>Organized a technical event focused on electronics Engineering. Robotics competitions like Robo-War, Robo-Race and Robo-Race were held.</p>
+        </div>
+        <div class="experience-item">
+          <h3><span style="color:#ffcc00;">Volunteer at 7th KEC Conference</span></h3>
+          <p><strong>Kantipur Engineering College</strong></p>
+          <p><span style="color:#ffcc00;">April 2025</span></p>
+          <p>Assisted in organizing the conference and supporting speakers and participants.</p>
+        </div>
+      </div>
+      <hr>
+      <!-- Experience Section End -->
 
-      <section class="contact">
-        <h1>My <span class="highlight">Contact</span></h1>
-        Email: <a href="baralmanash987@gmail.com">baralmanash987</a>
+
+      <footer>
+        <section class="contact">
+          <h1>My <span class="highlight">Contact</span></h1>
+          <div>
+            <strong>Email:</strong>
+            <a href="mailto:baralmanash987@gmail.com">baralmanash987@gmail.com</a>
+          </div>
+          <div>
+            <strong>Contact No.:</strong>
+            <a href="tel:+9779807967733">+977-9807967733</a>
+          </div>
+          <div class="footer-social">
+            <a href="https://www.linkedin.com/in/manash-baral-528147303" target="_blank" title="LinkedIn">
+              <img src="images/linkedin.png" alt="LinkedIn">
+            </a>
+            <a href="https://wa.me/9807967733" target="_blank" title="WhatsApp">
+              <img src="images/whatsapp.png" alt="WhatsApp">
+            </a>
+            <a href="https://facebook.com/your-facebook" target="_blank" title="Facebook">
+              <img src="images/facebook.png" alt="Facebook">
+            </a>
+            <a href="https://github.com/manashbaral" target="_blank" title="GitHub">
+              <img src="images/github.png" alt="GitHub">
+            </a>
+          </div>
+          <div class="footer-copyright">
+            &copy; 2025 Manash Baral. All rights reserved.
+          </div>
+        </section>
+      </footer>
 
     </main>
   <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
