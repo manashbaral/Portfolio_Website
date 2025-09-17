@@ -61,7 +61,7 @@
       color: #ffcc00;
     }
 
-    .first {
+    .Intro {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -126,20 +126,119 @@
       margin: 40px 0;
     ;
     }
-    .second {
-      max-width: 1200px;
-      margin: 50px auto;
-      padding: 0 20px;
-      text-align: left;
-    }
-
-    .wait{
-      color: red;
+    .skill {
       max-width: 1200px;
       margin: 50px auto;
       padding: 0 20px;
       text-align: center;
     }
+
+
+    .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px 60px;
+            max-width: 700px;
+            margin: 30px auto 0 auto;
+          }
+      .skill-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 180px;
+            margin-bottom: 40px;
+  }
+      .skill-item img {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+            margin-bottom: 10px;
+          }
+      .skill-caption {
+            color: #fff;
+            font-size: 1.1rem;
+            margin-top: 5px;
+            font-weight: 500;
+          }
+      @media (max-width: 900px) {
+            .skills-list {
+              gap: 30px 20px;
+            }
+      .skill-item {
+              width: 45vw;
+              max-width: 180px;
+            }
+          }
+      @media (max-width: 600px) {
+            .skills-list {
+              flex-direction: column;
+              align-items: center;
+              gap: 25px 0;
+            }
+      .skill-item {
+              width: 80vw;
+              max-width: 200px;
+            }
+          }
+
+    .projects {
+      max-width: 1200px;
+      margin: 50px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+    .projects-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px 60px;
+      max-width: 700px;
+      margin: 30px auto 0 auto;
+      
+    }
+    .project-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 700px;
+    height: 300px;
+    margin-bottom: 0px;
+    background-color: whitesmoke;
+  }
+
+  .project-description {
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+    padding: 20px;
+    background-color: #1e1e1e;
+    color: #f1f1f1;
+    text-align: left;
+    margin-bottom: 40px;
+    margin-top: 0px;
+  }
+
+  .Education {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  .education-item {
+    background-color: #1e1e1e;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+    border-radius: 8px;
+  }
+
+  .contact {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+    text-align: center;
+  }
   </style>
 </head>
 <body>
@@ -159,37 +258,121 @@
   </header>
 
   <main>
-    <section class="first">
+    <section class="Intro">
       <div class="left-section">
         Hi! I am <span class="highlight">Manash Baral</span>.
         <div>An Electronics, Communication and Information Engineering student.</div>
         <div>And I'm a passionate about <span id="element"></span></div>
       </div>
       <div class="right-section">
-        <img src="profile.png" alt="Profile Picture">
+        <img src="images/profile.png" alt="Profile Picture">
       </div>
     </section>
 
     <hr>
 
-    <section class="second">
-      <h1>My Skills</h1>
-      <ul>
-        <li>Programming Languages: Python, C, C++</li>
-        <li>Web Development: HTML, CSS, JavaScript</li>
-        <li>Machine Learning: Scikit-learn, TensorFlow</li>
-        <li>Data Analysis: Pandas, NumPy</li>
-        <li>Version Control: Git, GitHub</li>
-        <li>Embedded Systems: Arduino, Raspberry Pi</li>
-        <li>Communication Protocols: I2C, SPI, UART</li>
-      </ul>
+    <section class="skill">
+      <h1>My <span class="highlight">Skills</span></h1>
+
+
+        <div class="skills-list">
+          <div class="skill-item">
+            <img src="images/circuit.png" alt="Electronic">
+            <div class="skill-caption">Electronic</div>
+          </div>
+          <div class="skill-item">
+            <img src="images/HTML.png" alt="HTML">
+            <div class="skill-caption">HTML</div>
+          </div>
+          <div class="skill-item">
+            <img src="images/support.png" alt="AI">
+            <div class="skill-caption">AI</div>
+          </div>
+          <div class="skill-item">
+            <img src="images/support.png" alt="Skill 4">
+            <div class="skill-caption">Skill 4</div>
+          </div>
+          <div class="skill-item">
+            <img src="images/support.png" alt="Skill 5">
+            <div class="skill-caption">Skill 5</div>
+          </div>
+          <div class="skill-item">
+            <img src="images/support.png" alt="Skill 6">
+            <div class="skill-caption">Skill 6</div>
+          </div>
+          <div class="skill-item">
+            <img src="images/support.png" alt="Skill 7">
+            <div class="skill-caption">Skill 7</div>
+          </div>
+          <div class="skill-item">
+            <img src="images/support.png" alt="Skill 8">
+            <div class="skill-caption">Skill 8</div>
+          </div>
+        </div>
+        </div>
     </section>
 
-    <section class="wait">
-      <h1><span id="waitelement"></span></h1>
-    </section>
+  <hr>
 
-  </main>
+    <section class="projects">
+          <h1>My <span class="highlight">Projects</span></h1>
+          <div div class="projects-list">
+
+            <div class="project-item">
+              <img src="images/test.png" width="500px" height="300px" alt="Project 1">
+            </div>
+            <div class ="project-description">
+              <h2>Project Title: ABC</h2>
+              <p>This is a sample project description. You can replace this text with details about your project, technologies used, and any other relevant information.</p>
+            </div>
+
+            <div class="project-item">
+              <img src="images/test.png" width="500px" height="300px" alt="Project 2">
+            </div>
+            <div class ="project-description">
+              <h2>Project Title: DEF</h2>
+              <p>This is a sample project description. You can replace this text with details about your project, technologies used, and any other relevant information.</p>
+            </div>
+
+           <div class="project-item">
+              <img src="images/test.png" width="500px" height="300px" alt="Project 3">
+            </div>
+            <div class ="project-description">
+              <h2>Project Title: GHI</h2>
+              <p>This is a sample project description. You can replace this text with details about your project, technologies used, and any other relevant information.</p>
+            </div>
+          </div>
+        </section>
+
+      <hr>
+
+      <section class="Education">
+        <div class="education-list">
+          <h1>My <span class="highlight">Education</span></h1>
+          <div class="education-item">
+            <h3>Bachelor's in Electronics, Communication and Information Engineering</h3>
+            <p>Kantipur Engineering College, Tribhuvan University, 2023 - Present</p>
+          </div>
+          <div class="education-item">
+            <h3>School Leaving Certificate</h3>
+            <p>Global Educational Academy, 2019 - 2021</p>
+            <p>Stream: Science, GPA: 3.9</p>
+          </div>
+          <div class="education-item">
+            <h3>Secondary Education Examination</h3>
+            <p>Shishu Shiksha Sadan English School, 2017 - 2019</p>
+            <p>GPA: 3.9</p>
+          </div>
+        </div>
+      </section>
+    
+      <hr>
+
+      <section class="contact">
+        <h1>My <span class="highlight">Contact</span></h1>
+        Email: <a href="baralmanash987@gmail.com">baralmanash987</a>
+
+    </main>
   <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
    <!-- Setup and start animation! -->
   <script>
@@ -198,11 +381,7 @@
       loop: true,
       typeSpeed: 50,
     });
-    var typed = new Typed('#waitelement', {
-      strings: ['Please Wait...Site is Under Construction'],
-      loop: true,
-      typeSpeed: 50,
-    });
+    
   </script>
 </body>
 </html>
