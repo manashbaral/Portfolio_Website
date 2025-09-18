@@ -8,27 +8,39 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-
-
+  <style>
+    html {
+  scroll-behavior: smooth;
+}
+  </style>
 </head>
 <body>
   <header>
-    <nav>
+    <nav id="navbar">
       <div class="left">Manash's Portfolio</div>
-      <div class="right">
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <div class="right" id="navMenu">
         <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#achievements" class="nav-link">Achievements</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#experiences" class="nav-link">Experiences</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
       </div>
     </nav>
   </header>
 
   <main>
-    <section class="Intro">
+    <!-- Home -->
+    <section class="Intro" id="home">
+      <canvas id="circuit-bg"></canvas>
       <div class="left-section">
         Hi! I am <span class="highlight">Manash Baral</span>.
         <div>An Electronics, Communication and Information Engineering student.</div>
@@ -41,7 +53,8 @@
 
     <hr>
 
-    <section class="skill">
+    <!-- Skills -->
+    <section class="skill" id="skills">
       <h1>My <span class="highlight">Skills</span></h1>
 
 
@@ -87,7 +100,8 @@
 
   <hr>
 
-    <section class="projects">
+    <!-- Projects -->
+    <section class="projects" id="projects">
       <h1>My <span class="highlight">Projects</span></h1>
       <div div class="projects-list">
 
@@ -100,27 +114,56 @@
         </div>
 
         <div class="project-item">
-          <img src="images/project.png" width="500px" height="300px" alt="Project 2">
+          <img src="images/smartmirror.png" width="500px" height="400px" alt="Project 2">
         </div>
         <div class ="project-description">
-          <h2>Project Title: DEF</h2>
-          <p>This is a sample project description.</p>
+          <h2><span style="color:#ffcc00;">Project Title: Smart Mirror – Interactive IoT Display Powered by Raspberry Pi</span></h2>
+          <p>
+    An award-winning electronics hardware project that secured <em>First Runner-Up</em> at the KEC LITE Technical Exhibition (Kantipur Engineering College).<br><br>
+  <strong>Technologies Used:</strong><br>
+  • Hardware: Raspberry Pi (microcontroller), temperature &amp; pressure sensors, mirror/display module<br>
+  • Software: JavaScript (application logic), Node.js/Express (backend), HTML/CSS (UI)<br>
+  • Connectivity: Wi-Fi for IoT connectivity and remote updates<br><br>
+  <strong>What the Project Serves:</strong><br>
+  • Real-time clock and live weather data (temperature, pressure) with a 7-day forecast<br>
+  • Integrated to-do list and personalized greetings (e.g., “Good Morning”, “You’re Looking Good”)<br>
+  • Remote customization of displayed content via a dedicated web application<br>
+  • Demonstrates how embedded computing and web technologies enhance everyday objects
+</p>
+
         </div>
 
        <div class="project-item">
-          <img src="images/project.png" width="500px" height="300px" alt="Project 3">
-        </div>
+        <video width="500" height="300" controls>
+          <source src="videos/colorsort.mp4" id="video" type="video/mp4">
+          
+        </video>
         <div class ="project-description">
-          <h2>Project Title: GHI</h2>
-          <p>This is a sample project description.</p>
+          <h2>Project Title: <span style="color:#ffcc00;">Color Sorting System — Automated Sorting Using Arduino:</span></h2>
+          <p>
+  <strong>Color Sorting System — Automated Sorting Using Arduino:</strong><br><br>
+  An embedded hardware project designed to automatically identify and sort objects based on their color. This system was built using an <strong>Arduino microcontroller</strong>, a <strong>TCS3200 color sensor module</strong>, and <strong>servo motors</strong> to physically move items into their respective bins.<br><br>
+  <strong>Technologies Used:</strong><br>
+  • Arduino (microcontroller and control logic)<br>
+  • TCS3200 color sensor module for detecting object colors<br>
+  • Servo motors for mechanical sorting action<br>
+  • Supporting components for power and structure<br><br>
+  <strong>Purpose / What the Project Serves:</strong><br>
+  • Automatically detects the color of an object placed on the sensor<br>
+  • Rotates or actuates servo motors to direct the object into the correct bin based on its color<br>
+  • Demonstrates the integration of sensors and actuators with Arduino for real-time decision making<br>
+  • Provides a low-cost, scalable approach to automated color-based sorting useful in small-scale manufacturing, packaging, or educational demonstrations
+</p>
+
         </div>
       </div>
     </section>
 
     <hr>
 
+    <!-- Achievements -->
     <!-- Achievement Section Start -->
-    <section class="achievement">
+    <section class="achievement" id="achievements">
       <h1>My <span class="highlight">Achievements</span></h1>
       <div class="achievement-list">
         <div class="achievement-item">
@@ -151,7 +194,8 @@
 
     <hr>
 
-      <section class="Education">
+    <!-- Education -->
+      <section class="Education" id="education">
         <h1>My <span class="highlight">Education</span></h1>
         <div class="education-list">
           <div class="education-item">
@@ -177,14 +221,14 @@
     
       <hr>
       <!-- Experience Section Start -->
-      <section class="experience">
+      <section class="experience" id="experiences">
       <h1>My <span class="highlight">Experiences</span></h1>
       <div class="experience-list">
         <div class="experience-item">
           <h3><span style="color:#ffcc00;">Organizer</span></h3>
           <p><strong>KEC LITE 2024</strong></p>
           <p><span style="color:#ffcc00;">December 2024</span></p>
-          <p>Organized a technical event focused on electronics Engineering. Robotics competitions like Robo-War, Robo-Race and Robo-Race were held.</p>
+          <p>Organized a technical event focused on electronics Engineering. Robotics competitions like Robo-War, Robo-Race and Robo-Soccer were held.</p>
         </div>
         <div class="experience-item">
           <h3><span style="color:#ffcc00;">Volunteer at 7th KEC Conference</span></h3>
@@ -192,12 +236,19 @@
           <p><span style="color:#ffcc00;">April 2025</span></p>
           <p>Assisted in organizing the conference and supporting speakers and participants.</p>
         </div>
+        <div class="experience-item">
+          <h3><span style="color:#ffcc00;">Arduino Trainer</span></h3>
+          <p><strong>KEC ELECTRONIC CLUB</strong></p>
+          <p><span style="color:#ffcc00;">July 2025</span></p>
+          <p>Trainer for Arduino workshops, teaching students about microcontrollers and basic programming organized by <span style="color:#ffcc00;">KEC ELECTRONIC CLUB.</span></p>
+      </div>
       </div>
       <hr>
       <!-- Experience Section End -->
 
 
-      <footer>
+      <!-- Contact (footer) -->
+      <footer id="contact">
         <section class="contact">
           <h1>My <span class="highlight">Contact</span></h1>
           <div>
@@ -212,7 +263,7 @@
             <a href="https://www.linkedin.com/in/manash-baral-528147303" target="_blank" title="LinkedIn">
               <img src="images/linkedin.png" alt="LinkedIn">
             </a>
-            <a href="https://wa.me/9807967733" target="_blank" title="WhatsApp">
+            <a href="https://wa.me/+977-9807967733" target="_blank" title="WhatsApp">
               <img src="images/whatsapp.png" alt="WhatsApp">
             </a>
             <a href="https://facebook.com/your-facebook" target="_blank" title="Facebook">
@@ -222,6 +273,8 @@
               <img src="images/github.png" alt="GitHub">
             </a>
           </div>
+          <div class="footer-message-box">
+</div>
           <div class="footer-copyright">
             &copy; 2025 Manash Baral. All rights reserved.
           </div>
@@ -229,15 +282,9 @@
       </footer>
 
     </main>
-  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
    <!-- Setup and start animation! -->
-  <script>
-    var typed = new Typed('#element', {
-      strings: ['Electronics', 'Machine Learning', 'AI'],
-      loop: true,
-      typeSpeed: 50,
-    });
-    
-  </script>
+ 
+<script src="script.js"></script>
 </body>
 </html>

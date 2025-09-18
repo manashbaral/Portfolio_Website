@@ -4,25 +4,48 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #121212;
-  color: #f1f1f1;
-  line-height: 1.6;
+    font-family: 'Poppins', sans-serif;
+    background-color: #181818; 
+    color: #f1f1f1;
+    line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+html, body {
+  height: 100%;
+  min-height: 100vh;
+  width: 100vw;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 header {
+  width: 100vw;
+  left: 0;
+  right: 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   background-color: #148EB4;
+  box-shadow: 0 2px 12px #148EB433;
 }
 
 nav {
+  width: 100%;
+  max-width: 1200px;      /* Limit the navbar width on large screens */
+  margin: 0 auto;         /* Center the navbar content */
+  padding: 0 40px;        /* Add horizontal padding */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  height: 70px;
-  padding: 0 20px;
+  box-sizing: border-box;
 }
 
 .left {
@@ -48,6 +71,97 @@ nav ul li a {
 
 nav ul li a:hover {
   color: #ffcc00;
+}
+
+/* Hamburger Menu Styles */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 20px;
+  z-index: 200;
+}
+
+.nav-toggle .bar {
+  width: 28px;
+  height: 4px;
+  background: #f7f7f4;
+  margin: 4px 0;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* Responsive Navbar */
+@media (max-width: 900px) {
+  nav {
+    flex-direction: row;
+    max-width: 100vw;
+    padding: 0 16px;
+  }
+  nav .right {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    border-radius: 0;
+    background: linear-gradient(90deg, #148EB4 60%, #121212 100%);
+    box-shadow: 0 8px 24px #148EB433;
+    transform: translateY(-200%);
+    transition: transform 0.3s;
+    z-index: 100;
+    display: flex;
+    justify-content: center; /* Center the menu items horizontally */
+  }
+  nav .right.open {
+    transform: translateY(0);
+  }
+  nav .right ul {
+    flex-direction: column;
+    align-items: center; /* Center the menu items vertically */
+    padding: 24px 0;
+    gap: 18px;
+    width: 100vw;
+  }
+  .nav-toggle {
+    display: flex;
+  }
+}
+
+/* Highlight Active Link */
+nav ul li a.active,
+nav ul li a:hover {
+  color: #f1c827;
+  border-bottom: 3px solid #f1c827;
+  padding-bottom: 4px;
+  transition: color 0.2s, border-bottom 0.2s;
+}
+
+/* Remove border for inactive links */
+nav ul li a {
+  border-bottom: 3px solid transparent;
+}
+
+/* Tech Circuit Canvas Background */
+#circuit-bg {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+.Intro {
+  position: relative;
+  overflow: hidden;
+}
+.left-section, .right-section {
+  position: relative;
+  z-index: 2;
 }
 
 .Intro {
@@ -209,21 +323,29 @@ hr::before {
 display: flex;
 flex-direction: column;
 align-items: center;
-width: 700px;
-height: 300px;
+width: 800px;
 margin-bottom: 0px;
-background-color: whitesmoke;
+background-color: none;
 }
 
 .project-description {
 max-width: 700px;
+background: linear-gradient(120deg, #1e1e1e 0%, #148EB4 100%);
 margin: 0 auto 40px auto;
 padding: 20px;
-background-color: #1e1e1e;
 color: #f1f1f1;
 text-align: left;
 margin-bottom: 40px;
 margin-top: 0px;
+border-radius: 20px;
+box-shadow: 0 4px 18px rgba(20, 142, 180, 0.13);
+}
+
+.project-description:hover
+{
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 8px 32px rgba(20, 142, 180, 0.18);
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
 /* Enhanced Education Section Styles */
@@ -398,10 +520,20 @@ margin-top: 0px;
 
 /* Footer Styles */
 footer {
-  background: #148EB4;
+  padding: 20px 0 20px 0;
+  width: 100vw;
+  left: 0;  
+  right: 0;
+  position: relative;
+  background-color: #148EB4;
   color: #fff;
-  padding: 40px 0 20px 0;
+  padding: 20px 0 20px 0;
+  box-sizing: border-box;
+  margin-bottom: 0;
+  margin-left: calc(50% - 50vw); /* Ensures full width even inside centered containers */
+  flex-shrink: 0;
 }
+
 footer .contact {
   text-align: center;
 }
@@ -441,3 +573,8 @@ footer .contact div {
   font-size: 0.9rem;
   color: #e0e0e0;
 }
+
+
+
+
+
