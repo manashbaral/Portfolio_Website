@@ -135,6 +135,26 @@ navLinks.forEach(link => {
   animate();
 })();
 
- const vid = document.getElementById('video');
-  vid.muted = true;  // mutes the video
-  // vid.muted = false; // unmutes the video
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({
+        behavior: 'smooth'
+      });
+    }
+  });
+});
+
+// Pause video when modal is closed
+const modal = document.getElementById('projectModal');
+const video = document.getElementById('video'); 
+modal.addEventListener('hidden.bs.modal', () => {
+  if (video) {
+    video.pause();
+    video.currentTime = 0; // Reset video to start
+  }
+}); 

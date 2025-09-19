@@ -4,6 +4,7 @@ Welcome to my portfolio website! This project showcases my skills, projects, and
 ## Features
 
 - Responsive design
+- skills section
 - Project showcase section
 - About me page
 - Contact form
