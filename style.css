@@ -132,12 +132,10 @@ nav ul li a:hover {
   }
 }
 
-/* Highlight Active Link */
-nav ul li a.active,
 nav ul li a:hover {
   color: #f1c827;
   border-bottom: 3px solid #f1c827;
-  padding-bottom: 4px;
+  padding-bottom: 4px ;
   transition: color 0.2s, border-bottom 0.2s;
 }
 
@@ -308,46 +306,74 @@ hr::before {
   max-width: 1200px;
   margin: 50px auto;
   padding: 0 20px;
-  text-align: center;
+  text-align: center;  
+  align-content: center;
 }
+
 .projects-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  -ms-flex-align: center;
   gap: 40px 60px;
-  max-width: 700px;
-  margin: 30px auto 0 auto;
-  
-}
-.project-item {
-display: flex;
-flex-direction: column;
-align-items: center;
-width: 800px;
-margin-bottom: 0px;
-background-color: none;
+  max-width: 1200px;
+  margin: 50px auto 30px auto;
+  justify-content: center; 
+  align-content: center;
 }
 
-.project-description {
-max-width: 700px;
-/*background: linear-gradient(120deg, #1e1e1e 0%, #148EB4 100%);*/
-background: #1e1e1e;
-border-left: 6px solid #148EB4;
-margin: 0 auto 40px auto;
-padding: 20px;
-color: #f1f1f1;
-text-align: left;
-margin-bottom: 40px;
-margin-top: 0px;
-border-radius: 20px ;
-box-shadow: 0 4px 18px rgba(20, 142, 180, 0.13);
+.project-picture img {
+  width: relative;
+  height: 300px;
+  object-fit: cover;
+  align-items: center;
 }
+
+.project-text{
+  padding: 15px;
+  overflow: hidden;
+ text-align: left;            /* fixed height for text area */
+}
+
+
+.project-description {
+  display: flex;
+  flex-direction: column; 
+  
+  width: 1000px;               /* fixed width for all cards */
+  height: 600px;              /* fixed height for all cards */
+  overflow: hidden;           /* clip anything beyond height */
+  position: relative;         /* allow absolute positioning if needed */
+  background: #1e1e1e;
+  border-left: 6px solid #148EB4;
+  border-bottom: 6px solid #148EB4;
+  padding: 20px;
+  color: #f1f1f1;
+  border-radius: 20px;
+  box-shadow: 0 4px 18px rgba(20, 142, 180, 0.13);
+  transition: height 0.3s ease;
+  margin-bottom: 30px;
+}
+
+.project-text:hover {
+  overflow-y: auto;
+}
+
+
 
 .project-description:hover
 {
   transform: translateY(-4px) scale(1.01);
   box-shadow: 0 8px 32px rgba(20, 142, 180, 0.18);
   transition: transform 0.2s, box-shadow 0.2s;
+}
+
+@media (max-width: 768px) { /* Adjusted breakpoint for better responsiveness */
+  .project-list {
+    justify-content: center;
+  }
+  .project-description {
+    width: 100%;
+  }
 }
 
 /* Enhanced Education Section Styles */
@@ -496,6 +522,7 @@ box-shadow: 0 4px 18px rgba(20, 142, 180, 0.13);
   padding: 28px 36px;
   border-radius: 14px;
   border-left: 6px solid #148EB4;
+  border-bottom: 6px solid #148EB4;
   width: 45%;
   min-width: 280px;
   max-width: 500px;
